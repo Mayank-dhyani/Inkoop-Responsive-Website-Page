@@ -1,0 +1,464 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   
+    box-sizing: border-box;
+    
+}
+#top{
+  display: flex;
+  
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  
+}
+#name{
+    
+    font-size: 3rem;
+}
+#navbar li{
+   
+    list-style-type: none;
+    margin-left:-213px;
+
+}
+#navbar li a{
+    text-decoration:none;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    margin: 23px 23px;
+    color: rgb(105, 92, 92);
+    cursor: pointer;
+    
+}
+#navbar li a:hover{
+    background-color:chartreuse;
+    color: chocolate;
+    border-radius: 23px;
+
+}
+#search{
+  border: 2px solid black;
+  height: 35px;
+  border-radius: 23px;
+  padding-left: 16px;
+  margin-top: 23px;
+}
+#search #btn{
+    border: none;
+    padding: 0px 18px;
+    
+    font-size: 23px;
+    letter-spacing: 2px;
+    width: 161px;
+    
+}
+#btn:focus{
+    outline: none;
+}
+.menu-btn i{
+    color: blue;
+    font-size: 22px;
+    cursor: pointer;
+    display:none ;
+}
+#click{
+display: none;
+
+}
+nav .menu-btn i{
+    color: black;
+}
+#check{
+    display:none;
+}
+/*heading Start*/
+body{
+    background-color: white;
+}
+#heading{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 38px;
+    align-items: center;
+    justify-content: center;
+}
+#heading h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-indent:169px ;
+    font-size: 4rem;
+    white-space:pre;
+}
+#heading h1 pre{
+    margin-top: -80px;
+}
+#heading h1 span{
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#heading h2{
+   margin-top: -145px;
+   text-indent: 71px;
+    font-size: 1.5rem;
+    color: grey;
+    
+    
+}
+#heading h2::first-line{
+    word-spacing: 15px;
+}
+#heading h2 pre::first-line{
+    white-space: pre;
+}
+#heading button{
+    background-color:rgb(69, 9, 167);
+   padding:12px 24px;
+    color: white;
+    margin-top: 23px;
+    font-size: 1.5rem;
+    border-radius: 16px;  
+
+}
+/*Section*/
+#middle{
+    display: flex;
+    flex-flow: row nowrap;
+    height:302px;
+    margin-top:37px;
+}
+#middle img{
+    margin-left:129px;
+    height:404px;
+    width:712px;
+    border-radius: 23px;
+}
+#middle div{
+    
+    padding-left:68px;
+    margin-top:37px;
+    padding-top: 23px;
+    border-radius: 23px;
+    background-color: white;
+    box-shadow: 10px 10px 10px 10px gray;/* horizontal vertical blur spread*/
+    width:530px;
+    position: absolute;
+    left:785px;
+   
+}
+#middle div h2{
+    color: blue;
+}
+#middle div  h1{
+    font-size: 3rem;
+}
+#middle div h3{
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+#logo{
+    display: flex;
+    position: absolute;
+    left: 900px;
+    margin-top: 23px;
+}
+#logo img{
+  height:29px;
+  width: 33px;
+  margin: 23px 23px;
+
+}
+
+/*last*/
+#bottom{
+    background-color: rgb(11, 57, 184);
+    width:92vw;
+    margin-left: 50px;
+    border-radius: 23px ;
+    margin-bottom:63px;
+    color: white;
+}
+#last-heading{
+    margin-top:170px;
+    text-align: center;
+    font-size: 3rem;
+}
+.last{
+    margin-top:23px;
+    display: grid;
+    margin-left:144px;
+    padding-bottom:56px ;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.last .box-name img{
+    clip-path:circle() ;
+}
+.last #t1 img{
+    width: 117px;
+    height: 261px;
+}
+.last #t2 img{
+    width: 117px;
+    height: 261px;
+}
+.last #t3 img{
+    
+    width: 117px;
+    height:261px;
+}
+.last #t4 img{
+    width: 117px;
+    height: 261px;
+}
+.last #t5 img{
+    width: 117px;
+    height: 159px;
+}
+.last #t6 img{
+    width: 117px;
+    height: 159px;
+}
+.last #t7 img{
+    width: 117px;
+    height: 159px;
+}
+.last #t8 img{
+    width: 117px;
+    height: 159px;
+}
+
+/*Media Work*/
+
+
+
+/*Media for Mobile Only Not for desktop or tab  */
+@media (max-width:412px){
+    #navbar {
+      
+        position: fixed;
+        top: 80px;
+        left:-100vh;
+        background-color: #111;
+        height: 100vh;
+        width: 67vh;
+        z-index: 1;
+        text-align: center;
+        transition: all 0.3s ease;
+           
+    }
+    #click:checked ~ .menu-btn i::before{
+        content: "\f00d";
+        
+    }
+    #click:checked ~ ul{
+        left: 0;
+        color: black;
+    }
+    #navbar a{
+        display: block;
+        margin: 23px 23px;
+        color:white;
+    }
+   
+    .menu-btn i{
+        display:block;
+        position: absolute;
+        left:21px;
+        top: 28px;
+    }
+    /*end of navbar*/
+    /*Change is in logo*/
+    #name{
+        position: absolute;
+        font-size: 2.8rem;
+        top: 12px;
+        right:129px;
+    }
+    /*Now for SearchBar*/
+    #search{
+      border: none;
+  }
+    #slogo{
+        border: none;
+        position: absolute;
+        
+        right: 16px;
+        font-size: 1.5rem;
+    }
+    #search #btn{
+        
+        position: fixed;
+        background-color: black;
+        
+        color: wheat;
+        left: -100vh;
+        top:2%;
+        height:93vh;
+        width:46vh;
+        text-align: center;
+        z-index: 2;
+        transform: all 0.3s ease;
+       
+          }
+          #check:checked ~ #btn{
+              left: 0;
+              display: block;
+          }
+  #check:checked ~ .m1 i::before{
+      content: "\f00d";
+      /*end of Search*/
+  }
+  /* next media for heading*/
+ 
+    #heading h1{
+        text-indent: 0px;
+        font-size: 2.1rem;
+        margin-top:0px;
+    }
+    #heading h1 pre{
+        margin-top:-42px;
+    }
+    #heading h2{
+        text-indent: 0px;
+        font-size: 0.8rem;
+        word-spacing: 1px;
+        margin-top: -65px;
+    }
+  /*Section media*/
+ 
+  
+    #middle img{
+        position: absolute;
+        left: -107px;
+ width: 88vw;
+ top: 34vh;
+ height: 30%;
+    }
+     #middle div{
+         left: 42px;
+         top:57vh;
+         width: 76vw;
+         height: 281px;
+     }
+     #middle h1{
+       position: absolute;
+       font-size: 1rem;
+       
+       left: 0;
+     }
+     #middle h3{
+         position: absolute;
+         font-size: 1rem;
+         left: 13px;
+         top: 17vh;
+     }
+     #logo{
+ 
+         position: absolute;
+         left:40px;
+         top: 90vh;
+         
+ 
+     }
+ 
+ /*Last media*/
+ 
+    #bottom{
+        margin-left: 18px;
+        width: 41vh;
+        height: 144vh;
+    }
+    #last-heading{
+        margin-top:269px;
+    }
+    .last{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+        position: absolute;
+        color: black;
+        left:-105px;
+    }
+    .last #t1 h2{
+        margin-left: 23px;
+    }
+    
+}
+@media (max-width:1129px ) and (min-width:890px){
+    #navbar li a{
+        font-size: 1rem;
+    }
+    #middle img{
+        width: 434px;
+    }
+    #middle div{
+        left:500px;
+    }
+    #logo{
+        left:587px;
+    }
+}
+@media (max-width:891px)and (min-width:811px){
+  #top #name{
+      font-size:1.5rem;
+  }
+  #navbar li{
+      margin-left:-179px ;
+  }
+  #search{
+    margin-top: 2px;
+    width: 112px;
+    height: 25px;
+  }
+  #search #btn{
+      position: absolute;
+      font-size:0.5rem;
+      top: 11px;
+      right: -20px;
+  }
+  #heading{
+      width:762px;
+  }
+  #middle img{
+      width:312px;
+  }
+  #middle div{
+      left:335px;
+  }
+  #logo{
+      left:432px;
+  }
+}
+@media (max-width:810px) and (min-width:413px){
+    #navbar{
+        margin-left:251px;
+    }
+    #navbar li a{
+        font-size: 1rem;
+    }
+    #heading h1{
+        font-size: 3.1rem;
+        margin-right: 77px;
+    }
+    #heading h2{
+        margin-top:-125px;
+    }
+    #top #name{
+        font-size: 1.2rem;
+    }
+    #middle img{
+        width: 326px;
+        margin-left: 23px;
+    }
+    #middle div{
+        left: 300px;
+        width: 439px;
+    }
+    #logo{
+        left: 358px;
+    }
+    .last{
+        margin-left: 23px;
+    }
+}
